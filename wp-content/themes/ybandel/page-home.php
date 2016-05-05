@@ -23,7 +23,7 @@ get_header(); ?>
 
             <!-- main__clients -->
             <div class="main__clients">
-                <h3 class="main__clients-title">Ч‘Ч™Чџ ЧњЧ§Ч•Ч—Ч•ЧЄЧ™Ч Ч•</h3>
+                <h3 class="main__clients-title">בין לקוחותינו</h3>
 
                 <!-- swiper-container -->
                 <div class="swiper-container">
@@ -90,8 +90,8 @@ get_header(); ?>
             </div>
                 <!-- /swiper-container -->
 
-        </div>
-        <!-- /main__clients -->
+            </div>
+            <!-- /main__clients -->
 
         </aside>
         <!-- /main__aside -->
@@ -105,56 +105,59 @@ get_header(); ?>
                 <!-- swiper-wrapper -->
                 <div class="swiper-wrapper">
 
-                    <!-- swiper-slide -->
-                    <div class="swiper-slide">
-                        <img src="<?php echo TEMPLATEURI; ?>/dist/pic/main-slider1.png" alt="">
+                    <?php
+                    $tmp = $post;
 
-                        <!-- products-preview -->
-                        <div class="products-preview">
-                            <div class="products-preview__title">Ч§Ч‘Ч•Ч¦Ч•ЧЄ ЧћЧ™Ч§ЧЁЧ•ЧЎЧ•Ч¤Ч�</div>
-                            <div class="products-preview__square"><span>m<sup>2</sup></span> 5000</div>
-                            <div class="products-preview__link">
-                                <a href="#" class="btn btn_2">Ч¤ЧЁЧ•Ч™Ч™Ч§Ч�Ч™Чќ Ч Ч‘Ч—ЧЁЧ™Чќ</a>
-                                <span>Ч Ч™Ч”Ч•Чњ Ч¤ЧЁЧ•Ч™Ч§Ч� Ч‘Ч™Ч Ч•Ч™ ЧўЧ‘Ч•ЧЁ Ч§Ч‘Ч•Ч¦ЧЄ ЧћЧ™Ч§ЧЁЧ•ЧЎЧ•Ч¤Ч� Ч”Ч›Ч•ЧњЧњ ЧЄЧ§ЧЁЧ•ЧЄ Ч—Ч©Ч•Ч¤Ч•ЧЄ, Ч’ЧЁЧ¤Ч™Ч§Ч” Ч™Ч™Ч—Ч•Ч“Ч™ЧЄ, ЧђЧњЧћЧ Ч�Ч™Чќ ЧђЧ§Ч•ЧЎЧ�Ч™Ч™Чќ ЧћЧ•ЧЁЧ›Ч‘Ч™Чќ Ч•ЧћЧўЧЁЧ›Ч•ЧЄ Ч�Ч›Ч Ч•ЧњЧ•Ч’Ч™Ч•ЧЄ Ч—Ч“Ч©Ч Ч™Ч•ЧЄ.</span>
+                    $posts = get_posts( array(
+                            'post_type'  => 'project',
+                            'posts_per_page' => -1,
+                        )
+                    );
+
+
+                    foreach($posts as $post){
+                        setup_postdata($post);
+
+                        if(get_field('data_for_slide_on_home_page')[0]=='show'){
+                            $thumb_id = get_post_thumbnail_id();
+                            $thumb_url = wp_get_attachment_image_src($thumb_id,'full')[0];
+                            $position_data_table = get_field('choose_the_position_of_data_table');
+                            if($position_data_table=='bottom_left'){
+                                $sub_class='swiper-slide_bottom-left';
+                            }
+                            elseif($position_data_table=='top_right'){
+                                $sub_class='swiper-slide_top-right';
+                            } else{
+                            $sub_class='';
+                            }
+                            $title_slide = get_the_title();
+                            ?>
+
+                            <!-- swiper-slide -->
+                            <div class="swiper-slide <?php echo $sub_class;?>">
+                                <img src="<?php the_field('image_for_preview_on_home_page'); ?>" alt="<?php echo $title_slide;?>">
+
+                                <!-- products-preview -->
+                                <div class="products-preview">
+                                    <div class="products-preview__title"><?php echo $title_slide;?></div>
+                                    <div class="products-preview__square"><span>m<sup>2</sup></span><?php the_field('project_footage'); ?></div>
+                                    <div class="products-preview__link">
+                                        <a href="<?php the_permalink(); ?>" class="btn btn_2">פרוייקטים נבחרים</a>
+                                        <span><?php the_field('desciption_for_preview_on_home_page'); ?></span>
+                                    </div>
+                                </div>
+                                <!-- /products-preview -->
                             </div>
-                        </div>
-                        <!-- /products-preview -->
-                    </div>
-                    <!-- /swiper-slide -->
+                            <!-- /swiper-slide -->
 
-                    <!-- swiper-slide -->
-                    <div class="swiper-slide swiper-slide_bottom-left">
-                        <img src="<?php echo TEMPLATEURI; ?>/dist/pic/main-slider2.png" alt="">
 
-                        <!-- products-preview -->
-                        <div class="products-preview">
-                            <div class="products-preview__title">Ч§Ч‘Ч•Ч¦Ч•ЧЄ ЧћЧ™Ч§ЧЁЧ•ЧЎЧ•Ч¤Ч�</div>
-                            <div class="products-preview__square"><span>m<sup>2</sup></span> 4000</div>
-                            <div class="products-preview__link">
-                                <a href="#" class="btn btn_2">Ч¤ЧЁЧ•Ч™Ч™Ч§Ч�Ч™Чќ Ч Ч‘Ч—ЧЁЧ™Чќ</a>
-                                <span>Ч Ч™Ч”Ч•Чњ Ч¤ЧЁЧ•Ч™Ч§Ч� Ч‘Ч™Ч Ч•Ч™ ЧўЧ‘Ч•ЧЁ Ч§Ч‘Ч•Ч¦ЧЄ ЧћЧ™Ч§ЧЁЧ•ЧЎЧ•Ч¤Ч� Ч”Ч›Ч•ЧњЧњ ЧЄЧ§ЧЁЧ•ЧЄ Ч—Ч©Ч•Ч¤Ч•ЧЄ, Ч’ЧЁЧ¤Ч™Ч§Ч” Ч™Ч™Ч—Ч•Ч“Ч™ЧЄ, ЧђЧњЧћЧ Ч�Ч™Чќ ЧђЧ§Ч•ЧЎЧ�Ч™Ч™Чќ ЧћЧ•ЧЁЧ›Ч‘Ч™Чќ Ч•ЧћЧўЧЁЧ›Ч•ЧЄ Ч�Ч›Ч Ч•ЧњЧ•Ч’Ч™Ч•ЧЄ Ч—Ч“Ч©Ч Ч™Ч•ЧЄ.</span>
-                            </div>
-                        </div>
-                        <!-- /products-preview -->
-                    </div>
-                    <!-- /swiper-slide -->
+                            <?php }
 
-                    <!-- swiper-slide -->
-                    <div class="swiper-slide swiper-slide_top-right">
-                        <img src="<?php echo TEMPLATEURI; ?>/dist/pic/main-slider3.png" alt="">
+                    } ?>
 
-                        <!-- products-preview -->
-                        <div class="products-preview">
-                            <div class="products-preview__title">Ч§Ч‘Ч•Ч¦Ч•ЧЄ ЧћЧ™Ч§ЧЁЧ•ЧЎЧ•Ч¤Ч�</div>
-                            <div class="products-preview__square"><span>m<sup>2</sup></span> 3000</div>
-                            <div class="products-preview__link">
-                                <a href="#" class="btn btn_2">Ч¤ЧЁЧ•Ч™Ч™Ч§Ч�Ч™Чќ Ч Ч‘Ч—ЧЁЧ™Чќ</a>
-                                <span>Ч Ч™Ч”Ч•Чњ Ч¤ЧЁЧ•Ч™Ч§Ч� Ч‘Ч™Ч Ч•Ч™ ЧўЧ‘Ч•ЧЁ Ч§Ч‘Ч•Ч¦ЧЄ ЧћЧ™Ч§ЧЁЧ•ЧЎЧ•Ч¤Ч� Ч”Ч›Ч•ЧњЧњ ЧЄЧ§ЧЁЧ•ЧЄ Ч—Ч©Ч•Ч¤Ч•ЧЄ, Ч’ЧЁЧ¤Ч™Ч§Ч” Ч™Ч™Ч—Ч•Ч“Ч™ЧЄ, ЧђЧњЧћЧ Ч�Ч™Чќ ЧђЧ§Ч•ЧЎЧ�Ч™Ч™Чќ ЧћЧ•ЧЁЧ›Ч‘Ч™Чќ Ч•ЧћЧўЧЁЧ›Ч•ЧЄ Ч�Ч›Ч Ч•ЧњЧ•Ч’Ч™Ч•ЧЄ Ч—Ч“Ч©Ч Ч™Ч•ЧЄ.</span>
-                            </div>
-                        </div>
-                        <!-- /products-preview -->
-                    </div>
-                    <!-- /swiper-slide -->
+
+
+                <?php $post = $tmp; ?>
 
                 </div>
                 <!-- /swiper-wrapper -->
