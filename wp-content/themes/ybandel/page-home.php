@@ -23,7 +23,7 @@ get_header(); ?>
 
             <!-- main__clients -->
             <div class="main__clients">
-                <h3 class="main__clients-title">בין לקוחותינו</h3>
+                <h3 class="main__clients-title">Ч‘Ч™Чџ ЧњЧ§Ч•Ч—Ч•ЧЄЧ™Ч Ч•</h3>
 
                 <!-- swiper-container -->
                 <div class="swiper-container">
@@ -111,11 +111,11 @@ get_header(); ?>
 
                         <!-- products-preview -->
                         <div class="products-preview">
-                            <div class="products-preview__title">קבוצות מיקרוסופט</div>
+                            <div class="products-preview__title">Ч§Ч‘Ч•Ч¦Ч•ЧЄ ЧћЧ™Ч§ЧЁЧ•ЧЎЧ•Ч¤Ч�</div>
                             <div class="products-preview__square"><span>m<sup>2</sup></span> 5000</div>
                             <div class="products-preview__link">
-                                <a href="#" class="btn btn_2">פרוייקטים נבחרים</a>
-                                <span>ניהול פרויקט בינוי עבור קבוצת מיקרוסופט הכולל תקרות חשופות, גרפיקה ייחודית, אלמנטים אקוסטיים מורכבים ומערכות טכנולוגיות חדשניות.</span>
+                                <a href="#" class="btn btn_2">Ч¤ЧЁЧ•Ч™Ч™Ч§Ч�Ч™Чќ Ч Ч‘Ч—ЧЁЧ™Чќ</a>
+                                <span>Ч Ч™Ч”Ч•Чњ Ч¤ЧЁЧ•Ч™Ч§Ч� Ч‘Ч™Ч Ч•Ч™ ЧўЧ‘Ч•ЧЁ Ч§Ч‘Ч•Ч¦ЧЄ ЧћЧ™Ч§ЧЁЧ•ЧЎЧ•Ч¤Ч� Ч”Ч›Ч•ЧњЧњ ЧЄЧ§ЧЁЧ•ЧЄ Ч—Ч©Ч•Ч¤Ч•ЧЄ, Ч’ЧЁЧ¤Ч™Ч§Ч” Ч™Ч™Ч—Ч•Ч“Ч™ЧЄ, ЧђЧњЧћЧ Ч�Ч™Чќ ЧђЧ§Ч•ЧЎЧ�Ч™Ч™Чќ ЧћЧ•ЧЁЧ›Ч‘Ч™Чќ Ч•ЧћЧўЧЁЧ›Ч•ЧЄ Ч�Ч›Ч Ч•ЧњЧ•Ч’Ч™Ч•ЧЄ Ч—Ч“Ч©Ч Ч™Ч•ЧЄ.</span>
                             </div>
                         </div>
                         <!-- /products-preview -->
@@ -128,11 +128,11 @@ get_header(); ?>
 
                         <!-- products-preview -->
                         <div class="products-preview">
-                            <div class="products-preview__title">קבוצות מיקרוסופט</div>
+                            <div class="products-preview__title">Ч§Ч‘Ч•Ч¦Ч•ЧЄ ЧћЧ™Ч§ЧЁЧ•ЧЎЧ•Ч¤Ч�</div>
                             <div class="products-preview__square"><span>m<sup>2</sup></span> 4000</div>
                             <div class="products-preview__link">
-                                <a href="#" class="btn btn_2">פרוייקטים נבחרים</a>
-                                <span>ניהול פרויקט בינוי עבור קבוצת מיקרוסופט הכולל תקרות חשופות, גרפיקה ייחודית, אלמנטים אקוסטיים מורכבים ומערכות טכנולוגיות חדשניות.</span>
+                                <a href="#" class="btn btn_2">Ч¤ЧЁЧ•Ч™Ч™Ч§Ч�Ч™Чќ Ч Ч‘Ч—ЧЁЧ™Чќ</a>
+                                <span>Ч Ч™Ч”Ч•Чњ Ч¤ЧЁЧ•Ч™Ч§Ч� Ч‘Ч™Ч Ч•Ч™ ЧўЧ‘Ч•ЧЁ Ч§Ч‘Ч•Ч¦ЧЄ ЧћЧ™Ч§ЧЁЧ•ЧЎЧ•Ч¤Ч� Ч”Ч›Ч•ЧњЧњ ЧЄЧ§ЧЁЧ•ЧЄ Ч—Ч©Ч•Ч¤Ч•ЧЄ, Ч’ЧЁЧ¤Ч™Ч§Ч” Ч™Ч™Ч—Ч•Ч“Ч™ЧЄ, ЧђЧњЧћЧ Ч�Ч™Чќ ЧђЧ§Ч•ЧЎЧ�Ч™Ч™Чќ ЧћЧ•ЧЁЧ›Ч‘Ч™Чќ Ч•ЧћЧўЧЁЧ›Ч•ЧЄ Ч�Ч›Ч Ч•ЧњЧ•Ч’Ч™Ч•ЧЄ Ч—Ч“Ч©Ч Ч™Ч•ЧЄ.</span>
                             </div>
                         </div>
                         <!-- /products-preview -->
@@ -145,11 +145,11 @@ get_header(); ?>
 
                         <!-- products-preview -->
                         <div class="products-preview">
-                            <div class="products-preview__title">קבוצות מיקרוסופט</div>
+                            <div class="products-preview__title">Ч§Ч‘Ч•Ч¦Ч•ЧЄ ЧћЧ™Ч§ЧЁЧ•ЧЎЧ•Ч¤Ч�</div>
                             <div class="products-preview__square"><span>m<sup>2</sup></span> 3000</div>
                             <div class="products-preview__link">
-                                <a href="#" class="btn btn_2">פרוייקטים נבחרים</a>
-                                <span>ניהול פרויקט בינוי עבור קבוצת מיקרוסופט הכולל תקרות חשופות, גרפיקה ייחודית, אלמנטים אקוסטיים מורכבים ומערכות טכנולוגיות חדשניות.</span>
+                                <a href="#" class="btn btn_2">Ч¤ЧЁЧ•Ч™Ч™Ч§Ч�Ч™Чќ Ч Ч‘Ч—ЧЁЧ™Чќ</a>
+                                <span>Ч Ч™Ч”Ч•Чњ Ч¤ЧЁЧ•Ч™Ч§Ч� Ч‘Ч™Ч Ч•Ч™ ЧўЧ‘Ч•ЧЁ Ч§Ч‘Ч•Ч¦ЧЄ ЧћЧ™Ч§ЧЁЧ•ЧЎЧ•Ч¤Ч� Ч”Ч›Ч•ЧњЧњ ЧЄЧ§ЧЁЧ•ЧЄ Ч—Ч©Ч•Ч¤Ч•ЧЄ, Ч’ЧЁЧ¤Ч™Ч§Ч” Ч™Ч™Ч—Ч•Ч“Ч™ЧЄ, ЧђЧњЧћЧ Ч�Ч™Чќ ЧђЧ§Ч•ЧЎЧ�Ч™Ч™Чќ ЧћЧ•ЧЁЧ›Ч‘Ч™Чќ Ч•ЧћЧўЧЁЧ›Ч•ЧЄ Ч�Ч›Ч Ч•ЧњЧ•Ч’Ч™Ч•ЧЄ Ч—Ч“Ч©Ч Ч™Ч•ЧЄ.</span>
                             </div>
                         </div>
                         <!-- /products-preview -->
