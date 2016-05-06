@@ -25,30 +25,31 @@ get_header(); ?>
             <!-- contact-us__wrapper -->
             <div class="contact-us__wrapper">
 
-                <?php echo do_shortcode('[contact-form-7 id="62" title="Contact Form" html_class="site__form form-validation"]');?>
+                <?php echo do_shortcode('[contact-form-7 id="62" title="Contact Form" html_class="site__form"]');?>
 
                 <!-- contact-us__address -->
                 <address class="contact-us__address">
 
                     <!-- contact-us__address-title -->
-                    <div class="contact-us__address-title">רמב"ם 85, רעננה</div>
+                    <div class="contact-us__address-title"><?php the_field('address'); ?></div>
                     <!-- /contact-us__address-title -->
 
                     <dl>
                         <dt>טלפון:</dt>
-                        <dd>03.6470984</dd>
+                        <dd><?php the_field('phone'); ?></dd>
                     </dl>
                     <dl>
                         <dt>נייד:</dt>
-                        <dd>054.4840704</dd>
+                        <dd><?php the_field('phone_2'); ?></dd>
                     </dl>
                     <dl>
                         <dt>פקס:</dt>
-                        <dd>03.6470987</dd>
+                        <dd><?php the_field('fax'); ?></dd>
                     </dl>
                     <dl>
                         <dt>דוא״ל:</dt>
-                        <dd><a href="mailto:yigal@ybpm.co.il">yigal@ybpm.co.il</a></dd>
+                        <dd><?php $email = get_field('e-mail'); ?>
+                            <a href="mailto:<?php echo $email; ?>"><?php echo $email; ?></a></dd>
                     </dl>
 
                 </address>

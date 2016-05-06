@@ -51,6 +51,11 @@
                         $active = 'active';
                     } else {
                         $active = '';
+                        if($menu_item->object_id==15){
+                              if( get_post_type($post->ID)=='project' ){
+                                  $active = 'active';
+                              }
+                        }
                     }
                     ?>
 
