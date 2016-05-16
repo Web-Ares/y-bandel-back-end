@@ -282,7 +282,7 @@ get_header(); ?>
             </div>
             <!-- /all-works__wrap -->
 
-        <?php echo 'Pagination'.theme_pagination(); ?>
+        <?php echo theme_pagination(); ?>
         </div>
         <!-- /all-works -->
 
