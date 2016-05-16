@@ -78,6 +78,7 @@ get_header(); ?>
 
                         <label for="1k">
 
+
                             <!-- filter__icon -->
                             <span class="filter__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 46 46"><path class="cls-1" d="M36.17,29.87L24.69,24.05V18a0.3,0.3,0,0,0-.16-0.26L13.08,11.33a0.31,0.31,0,0,0-.31,0,0.3,0.3,0,0,0-.15.26V30.27a0.27,0.27,0,0,0,0,.08,0.3,0.3,0,0,0,0,.12,0.3,0.3,0,0,0,.16.27l11.46,6.44a0.31,0.31,0,0,0,.15,0,0.3,0.3,0,0,0,.15,0L36.18,30.4A0.3,0.3,0,0,0,36.17,29.87ZM24.08,18.21v5.85L13.24,30V12.11Zm0,6.54V36.38L13.56,30.47Zm0.61,11.62V24.74l10.7,5.42Z"/></svg></span>
                             <!-- /filter__icon -->
@@ -86,7 +87,7 @@ get_header(); ?>
                             <span class="filter__value">
 
                                 <!-- filter__value-mobile -->
-                                <span class="filter__value-mobile">100-1K מ״ר</span>
+                                <span class="filter__value-mobile">100-1k מ״ר</span>
                                 <!-- /filter__value-mobile -->
 
                                 <!-- filter__value-desktop -->
@@ -116,7 +117,7 @@ get_header(); ?>
                             <span class="filter__value">
 
                                 <!-- filter__value-mobile -->
-                                <span class="filter__value-mobile">1K-3K מ״ר</span>
+                                <span class="filter__value-mobile">1k-3k מ״ר</span>
                                 <!-- /filter__value-mobile -->
 
                                 <!-- filter__value-desktop -->
@@ -146,7 +147,7 @@ get_header(); ?>
                             <span class="filter__value">
 
                                 <!-- filter__value-mobile -->
-                                <span class="filter__value-mobile">3K-6K מ״ר</span>
+                                <span class="filter__value-mobile">3k-6k מ״ר</span>
                                 <!-- /filter__value-mobile -->
 
                                 <!-- filter__value-desktop -->
