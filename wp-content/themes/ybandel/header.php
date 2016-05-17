@@ -9,7 +9,7 @@
     <title><?php document_title(); ?></title>
     <?php wp_head(); ?>
 </head>
-<body>
+<body data-action="<?php echo admin_url( 'admin-ajax.php' );?>">
 <?php if (is_page() || is_single() || is_singular() || is_404()) {
     the_post();
 } ?>

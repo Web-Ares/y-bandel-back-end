@@ -21,63 +21,18 @@ get_header(); ?>
             <!-- all-works__title -->
             <h2 class="all-works__title"><?php the_field('description_text'); ?></h2>
             <!-- /all-works__title -->
-
             <!-- filter -->
-            <form action="<?php the_permalink(15); ?>" class="filter" method="get">
+            <form action="#" class="filter">
 
-                <?php
-                $filter_1 = $_GET['1k'];
-                $filter_2 = $_GET['3k'];
-                $filter_3 = $_GET['6k'];
-                $filter_4 = $_GET['15k'];
-
-                if($filter_1){
-                    $check_flag_1 = 'checked';
-                    $range_1 = array(
-                        'key' => 'project_footage',
-                        'value' => array(100,1000),
-                        'compare' => 'BETWEEN',
-                        'type' => 'NUMERIC',
-                    );
-                }
-                if($filter_2){
-                    $check_flag_2 = 'checked';
-                    $range_2 = array(
-                        'key' => 'project_footage',
-                        'value' => array(1000,3000),
-                        'compare' => 'BETWEEN',
-                        'type' => 'NUMERIC',
-                    );
-                }
-                if($filter_3){
-                    $check_flag_3 = 'checked';
-                    $range_3 = array(
-                        'key' => 'project_footage',
-                        'value' => array(3000,6000),
-                        'compare' => 'BETWEEN',
-                        'type' => 'NUMERIC',
-                    );
-                }
-                if($filter_4){
-                    $check_flag_4 = 'checked';
-                    $range_4 = array(
-                        'key' => 'project_footage',
-                        'value' => array(6000,999999),
-                        'compare' => 'BETWEEN',
-                        'type' => 'NUMERIC',
-                    );
-                }
-                ?>
                 <!-- filter__wrap -->
                 <div class="filter__wrap">
 
                     <!-- filter__item -->
                     <div class="filter__item">
 
-                        <input type="checkbox" id="1k" name="1k" value="1k" <?php echo $check_flag_1; ?>>
+                        <input type="checkbox" name="1k" id="1k">
 
                         <label for="1k">
-
 
                             <!-- filter__icon -->
                             <span class="filter__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 46 46"><path class="cls-1" d="M36.17,29.87L24.69,24.05V18a0.3,0.3,0,0,0-.16-0.26L13.08,11.33a0.31,0.31,0,0,0-.31,0,0.3,0.3,0,0,0-.15.26V30.27a0.27,0.27,0,0,0,0,.08,0.3,0.3,0,0,0,0,.12,0.3,0.3,0,0,0,.16.27l11.46,6.44a0.31,0.31,0,0,0,.15,0,0.3,0.3,0,0,0,.15,0L36.18,30.4A0.3,0.3,0,0,0,36.17,29.87ZM24.08,18.21v5.85L13.24,30V12.11Zm0,6.54V36.38L13.56,30.47Zm0.61,11.62V24.74l10.7,5.42Z"/></svg></span>
@@ -87,7 +42,7 @@ get_header(); ?>
                             <span class="filter__value">
 
                                 <!-- filter__value-mobile -->
-                                <span class="filter__value-mobile">100-1k מ״ר</span>
+                                <span class="filter__value-mobile">100-1K מ״ר</span>
                                 <!-- /filter__value-mobile -->
 
                                 <!-- filter__value-desktop -->
@@ -105,7 +60,7 @@ get_header(); ?>
                     <!-- filter__item -->
                     <div class="filter__item">
 
-                        <input type="checkbox" id="3k" name="3k" value="3k" <?php echo $check_flag_2; ?>>
+                        <input type="checkbox" name="3k" id="3k">
 
                         <label for="3k">
 
@@ -117,7 +72,7 @@ get_header(); ?>
                             <span class="filter__value">
 
                                 <!-- filter__value-mobile -->
-                                <span class="filter__value-mobile">1k-3k מ״ר</span>
+                                <span class="filter__value-mobile">1K-3K מ״ר</span>
                                 <!-- /filter__value-mobile -->
 
                                 <!-- filter__value-desktop -->
@@ -135,7 +90,7 @@ get_header(); ?>
                     <!-- filter__item -->
                     <div class="filter__item">
 
-                        <input type="checkbox" id="6k" name="6k" value="6k" <?php echo $check_flag_3; ?>>
+                        <input type="checkbox" name="6k" id="6k">
 
                         <label for="6k">
 
@@ -147,7 +102,7 @@ get_header(); ?>
                             <span class="filter__value">
 
                                 <!-- filter__value-mobile -->
-                                <span class="filter__value-mobile">3k-6k מ״ר</span>
+                                <span class="filter__value-mobile">3K-6K מ״ר</span>
                                 <!-- /filter__value-mobile -->
 
                                 <!-- filter__value-desktop -->
@@ -165,7 +120,7 @@ get_header(); ?>
                     <!-- filter__item -->
                     <div class="filter__item">
 
-                        <input type="checkbox" id="15k" name="15k" value="15k" <?php echo $check_flag_4; ?>>
+                        <input type="checkbox" name="15k" id="15k">
 
                         <label for="15k">
 
@@ -177,11 +132,11 @@ get_header(); ?>
                             <span class="filter__value">
 
                                <!-- filter__value-mobile -->
-                                <span class="filter__value-mobile">6,000 מ"ר ועוד</span>
+                                <span class="filter__value-mobile">6K-15K מ״ר</span>
                                 <!-- /filter__value-mobile -->
 
                                 <!-- filter__value-desktop -->
-                                <span class="filter__value-desktop">6,000 מ"ר ועוד</span>
+                                <span class="filter__value-desktop">6,000-15,000 מ״ר</span>
                                 <!-- /filter__value-desktop -->
 
                             </span>
@@ -282,7 +237,12 @@ get_header(); ?>
             </div>
             <!-- /all-works__wrap -->
 
-        <?php echo 'Pagination'.theme_pagination(); ?>
+            <div class="all-works__loader">
+                <div class="all-works__loader-inner all-works__loader-inner_one"></div>
+                <div class="all-works__loader-inner all-works__loader-inner_two"></div>
+                <div class="all-works__loader-inner all-works__loader-inner_three"></div>
+            </div>
+
         </div>
         <!-- /all-works -->
 

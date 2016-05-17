@@ -55,18 +55,7 @@ get_header(); ?>
                     <div class="clients__item"><img src="<?php echo $thumb_url; ?>" alt="<?php echo $post->name; ?>"></div>
                     <!-- /clients__item -->
 
-                <?php $count++; }
-                $result=$count%4;
-                if($result!=0) {
-                    $null = 4 - $result;
-                    }
-                for($j=1;$j<=$null; $j++){
-                    echo '<!-- clients__item -->
-                            <div class="clients__item"></div>
-                        <!-- /clients__item -->';
-                }
-
-                ?>
+                <?php $count++; } ?>
 
             </div>
             <!-- /clients__list -->

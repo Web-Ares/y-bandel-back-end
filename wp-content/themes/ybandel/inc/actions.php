@@ -122,6 +122,7 @@ function add_js()
 wp_enqueue_style('style', get_template_directory_uri().'/style.css');
 
 
+
 if ( function_exists( 'add_theme_support' ) ) add_theme_support( 'post-thumbnails' );
 register_nav_menus( array(
     'menu' => 'menu'
@@ -299,4 +300,57 @@ function theme_pagination() {
     echo $pages . wb_paginate_links($a);
     if ($max > 1) echo '</div>';
 }
+
+function get_posts_current(){
+
+    $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+
+    $args = array(
+        'paged' => $paged,
+        'post_type' => 'project',
+        'posts_per_page' => '6'
+    );
+    $projects = new WP_query ( $args );
+
+    if ( $projects->have_posts() ) {
+
+        while ( $projects->have_posts()) :
+
+            $projects->the_post();
+
+            $thumb_id = get_post_thumbnail_id();
+            $thumb_url = wp_get_attachment_image_src($thumb_id,'full')[0];
+            $current_icon_footage = get_field('project_footage'); ?>
+
+            <?php   $cur .= '{
+            "pic": "'.$thumb_url.'",
+            "name": "'.get_the_title().'",
+            "icon": "<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 46 46\'><path d=\'M36.17,29.87L24.69,24.05V18a0.3,0.3,0,0,0-.16-0.26L13.08,11.33a0.31,0.31,0,0,0-.31,0,0.3,0.3,0,0,0-.15.26V30.27a0.27,0.27,0,0,0,0,.08,0.3,0.3,0,0,0,0,.12,0.3,0.3,0,0,0,.16.27l11.46,6.44a0.31,0.31,0,0,0,.15,0,0.3,0.3,0,0,0,.15,0L36.18,30.4A0.3,0.3,0,0,0,36.17,29.87ZM24.08,18.21v5.85L13.24,30V12.11Zm0,6.54V36.38L13.56,30.47Zm0.61,11.62V24.74l10.7,5.42Z\'/></svg>",
+            "square": "'.get_field("project_footage").'",
+            "link": "'.get_the_permalink().'"
+            },';
+            ?>
+
+
+        <?php endwhile;
+    } else {
+
+    }
+    $cur = substr($cur, 0, -1);
+
+    $json_data = '{
+                "col": 10,
+                "items": [
+                  '.$cur.'
+               ]
+              }';
+
+   echo $json_data;
+    exit;
+}
+
+add_action('wp_ajax_get_posts','get_posts_current');
+
+add_action('wp_ajax_nopriv_get_posts', 'get_posts_current');
+
 ?>
