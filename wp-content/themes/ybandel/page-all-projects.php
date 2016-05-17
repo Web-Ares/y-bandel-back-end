@@ -30,7 +30,7 @@ get_header(); ?>
                     <!-- filter__item -->
                     <div class="filter__item">
 
-                        <input type="checkbox" name="1k" id="1k">
+                        <input type="checkbox" name="k1" id="1k" checked>
 
                         <label for="1k">
 
@@ -60,7 +60,7 @@ get_header(); ?>
                     <!-- filter__item -->
                     <div class="filter__item">
 
-                        <input type="checkbox" name="3k" id="3k">
+                        <input type="checkbox" name="k3" id="3k" checked>
 
                         <label for="3k">
 
@@ -90,7 +90,7 @@ get_header(); ?>
                     <!-- filter__item -->
                     <div class="filter__item">
 
-                        <input type="checkbox" name="6k" id="6k">
+                        <input type="checkbox" name="k6" id="6k">
 
                         <label for="6k">
 
@@ -120,7 +120,7 @@ get_header(); ?>
                     <!-- filter__item -->
                     <div class="filter__item">
 
-                        <input type="checkbox" name="15k" id="15k">
+                        <input type="checkbox" name="k15" id="15k">
 
                         <label for="15k">
 
