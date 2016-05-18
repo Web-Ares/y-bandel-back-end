@@ -30,7 +30,7 @@ get_header(); ?>
                     <!-- filter__item -->
                     <div class="filter__item">
 
-                        <input type="checkbox" name="k1" id="1k" checked>
+                        <input type="checkbox" name="k1" id="1k">
 
                         <label for="1k">
 
@@ -60,7 +60,7 @@ get_header(); ?>
                     <!-- filter__item -->
                     <div class="filter__item">
 
-                        <input type="checkbox" name="k3" id="3k" checked>
+                        <input type="checkbox" name="k3" id="3k">
 
                         <label for="3k">
 

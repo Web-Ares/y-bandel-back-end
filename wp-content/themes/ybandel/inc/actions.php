@@ -304,11 +304,9 @@ function theme_pagination() {
 
 function get_posts_current(){
 
-
     $paged=$_GET['currentPage']+1;
     $param = $_GET['filterData'];
     parse_str($param);
-
 
     if($k1){
 
@@ -318,7 +316,7 @@ function get_posts_current(){
             'compare' => 'BETWEEN',
             'type' => 'NUMERIC',
         );
-        $paged=1;
+
     }
     if($k3){
         $range_2 = array(
@@ -327,7 +325,7 @@ function get_posts_current(){
             'compare' => 'BETWEEN',
             'type' => 'NUMERIC',
         );
-        $paged=1;
+
     }
     if($k6){
 
@@ -337,7 +335,7 @@ function get_posts_current(){
             'compare' => 'BETWEEN',
             'type' => 'NUMERIC',
         );
-        $paged=1;
+
     }
     if($k15){
 
@@ -347,9 +345,8 @@ function get_posts_current(){
             'compare' => 'BETWEEN',
             'type' => 'NUMERIC',
         );
-        $paged=1;
-    }
 
+    }
 
     $args = array(
         'paged' => $paged,
@@ -368,7 +365,7 @@ function get_posts_current(){
     if ( $projects->have_posts() ) {
         $max = $projects->max_num_pages;
         while ( $projects->have_posts()) :
-
+            $col = 10;
             $projects->the_post();
 
             $thumb_id = get_post_thumbnail_id();
@@ -398,15 +395,14 @@ function get_posts_current(){
             },';
             ?>
 
-
         <?php endwhile;
     } else {
-
+       $col = 0;
     }
     $cur = substr($cur, 0, -1);
 
     $json_data = '{
-                "col": 10,
+                "col": '.$col.',
                 "items": [
                   '.$cur.'
                ]
