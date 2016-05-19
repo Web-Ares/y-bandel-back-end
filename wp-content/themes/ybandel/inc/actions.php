@@ -304,6 +304,8 @@ function theme_pagination() {
 
 function get_posts_current(){
 
+    $json_data='';
+    $cur='';
     $paged=$_GET['currentPage']+1;
     $param = $_GET['filterData'];
     parse_str($param);
@@ -361,10 +363,14 @@ function get_posts_current(){
         ),
     );
     $projects = new WP_query ( $args );
+    $max = $projects->max_num_pages;
 
     if ( $projects->have_posts() ) {
-        $max = $projects->max_num_pages;
+
+        $json_data='';
+        $cur='';
         while ( $projects->have_posts()) :
+
             $col = 10;
             $projects->the_post();
 
@@ -388,7 +394,7 @@ function get_posts_current(){
 
             <?php   $cur .= '{
             "pic": "'.$thumb_url.'",
-            "name": "'.$filterData1.'",
+            "name": "'.get_the_title().'",
             "icon": "'.$cur_footage.'",
             "square": "'.get_field("project_footage").'",
             "link": "'.get_the_permalink().'"
@@ -396,8 +402,9 @@ function get_posts_current(){
             ?>
 
         <?php endwhile;
-    } else {
-       $col = 0;
+    }
+    if($max==$paged){
+        $col = 0;
     }
     $cur = substr($cur, 0, -1);
 

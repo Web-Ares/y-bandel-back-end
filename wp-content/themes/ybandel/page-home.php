@@ -14,7 +14,7 @@ get_header(); ?>
         <aside class="main__aside">
 
             <!-- main__logo -->
-            <div class="main__logo"><img src="<?php echo TEMPLATEURI; ?>/dist/img/logo2.png" width="54" alt="Y Bandel"></div>
+            <div class="main__logo"><img src="<?php echo TEMPLATEURI; ?>/dist/img/logo2.png" width="66" alt="Y Bandel"></div>
             <!-- /main__logo -->
 
             <!-- main__title -->
@@ -37,18 +37,14 @@ get_header(); ?>
                         $tmp = $post;
 
                         $posts = get_posts( array(
-                            'post_type'  => 'clients',
+                            'post_type'  => 'project',
                             'posts_per_page' => -1,
                             )
                         );
 
                         $position = 1;
                         foreach($posts as $post){setup_postdata($post);
-
-                            if(get_field('show_on_home_page')[0]=='show'){
-
-                            $thumb_id = get_post_thumbnail_id();
-                            $thumb_url = wp_get_attachment_image_src($thumb_id,'full')[0];
+                        if(get_field('data_for_slide_on_home_page')[0]=='show'){
                             if($position!=1 && $position==3){ $position = 1;
                                 echo '</div>
                                     <!-- /swiper-slide -->
@@ -59,12 +55,16 @@ get_header(); ?>
 
                                 <!-- main__clients-item -->
                                 <div class="main__clients-item">
-                                    <?php if($position==1){ ?>
-                                        <span class="main__clients-pic"><img src="<?php echo $thumb_url; ?>" alt="Microsoft"></span>
-                                        <span class="main__clients-description"><?php the_field('description_field'); ?></span>
+                                    <?php
+                                    $client_logo = get_field('clients_logo');
+                                    $client_descr =  get_field('description_field',false, false);
+
+                                    if($position==1){ ?>
+                                        <span class="main__clients-pic"><img src="<?php echo $client_logo; ?>" alt="Microsoft"></span>
+                                        <span class="main__clients-description"><?php echo $client_descr; ?></span>
                                     <?php } else { ?>
-                                        <span class="main__clients-description"><?php the_field('description_field'); ?></span>
-                                        <span class="main__clients-pic"><img src="<?php echo $thumb_url; ?>" alt="Microsoft"></span>
+                                        <span class="main__clients-description"><?php echo $client_descr; ?></span>
+                                        <span class="main__clients-pic"><img src="<?php echo $client_logo; ?>" alt="Microsoft"></span>
                                    <?php }?>
                                 </div>
                                 <!-- /main__clients-item -->
@@ -72,7 +72,7 @@ get_header(); ?>
 
                         <?  $position++; }
 
-                        } ?>
+                        }  ?>
 
 
                     </div>
@@ -98,7 +98,7 @@ get_header(); ?>
 
         <!-- main__slider -->
         <div class="main__slider">
-
+            <a href="<?php the_permalink(15); ?>" class="btn btn_2">פרוייקטים נבחרים</a>
             <!-- swiper-container -->
             <div class="swiper-container">
 

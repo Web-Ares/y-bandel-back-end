@@ -21,7 +21,7 @@ get_header(); ?>
             <!-- about-us__founder -->
             <div class="about-us__founder">
 
-                <img src="<?php the_field('main_image'); ?>" alt="founder">
+                <img src="<?php echo TEMPLATEURI;?>/dist/pic/about-us__founder.jpg" alt="founder">
 
                 <!-- about-us__founder-title -->
                 <strong class="about-us__founder-title"><?php the_field('founder_field'); ?></strong>
