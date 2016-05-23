@@ -21,7 +21,7 @@ get_header(); ?>
             <!-- project-management__founder -->
             <div class="project-management__founder">
 
-                <img src="<?php echo TEMPLATEURI; ?>/dist/pic/project-management__pic.jpg" alt="founderImage">
+                <img src="<?php echo TEMPLATEURI;?>/dist/pic/project-management__pic.jpg" alt="founderImage">
 
                 <!-- project-management__founder-title -->
                 <strong class="project-management__founder-title"><?php the_field('main_description_on_page'); ?></strong>
@@ -30,51 +30,53 @@ get_header(); ?>
             </div>
             <!-- /project-management__founder -->
 
-            <?php if( have_rows('choose_the_type_of_block') ):
+            <!-- project-management__step -->
+            <div class="project-management__step project-management__step_A">
 
-                while ( have_rows('choose_the_type_of_block') ) : the_row();
-                    $type = get_sub_field('choose_the_type_of_new_block');
-                    if($type=='type_a'){
-                        $cur_class='project-management__step_A';
-                        ?>
+                <img src="<?php echo TEMPLATEURI;?>/dist/pic/project-management_pic-A.png" alt="">
 
-                    <?php }
-                    if($type=='type_b'){
-                        $cur_class='project-management__step_B';
-                        ?>
+                <h2 class="project-management__title" data-letter="A">
 
-                    <?php }
-                    if($type=='type_c'){
-                        $cur_class='project-management__step_C';
-                        ?>
+                    <?php the_field('main_title_for__step_a',false,false); ?>
+                </h2>
 
-                    <?php } ?>
+                <?php the_field('list_of_items'); ?>
 
-                    <!-- project-management__step -->
-                    <div class="project-management__step <?php echo $cur_class; ?>">
-                        <?php $image = get_sub_field('choose_the_background_image');
-                              $letter = get_sub_field('choose_the_sequence_of_letter'); ?>
+                <?php the_field('second_list_of_items_a'); ?>
 
-                        <img src="<?php echo $image; ?>" alt="Image">
+            </div>
+            <!-- /project-management__step -->
 
-                        <h2 class="project-management__title" data-letter="<?php echo $letter;?>">
-                            <?php the_sub_field('main_title_for_new_step'); ?>
-                        </h2>
+            <!-- project-management__step -->
+            <div class="project-management__step project-management__step_B">
 
+                <img src="<?php echo TEMPLATEURI;?>/dist/pic/project-management_pic-B.png" alt="">
 
-                        <?php
-                        the_sub_field('list_of_items');
-                        the_sub_field('second_list_of_items');
-                        ?>
+                <h2 class="project-management__title" data-letter="B">
+                    <?php the_field('main_title_for__step_b',false,false); ?>
+                </h2>
+
+                <?php the_field('second_list_of_items_a_copy'); ?>
+
+            </div>
+            <!-- /project-management__step -->
+
+            <!-- project-management__step -->
+            <div class="project-management__step project-management__step_C">
+
+                <img src="<?php echo TEMPLATEURI;?>/dist/pic/project-management_pic-C.png" alt="">
 
 
-                    </div>
-                    <!-- /project-management__step -->
+                <h2 class="project-management__title" data-letter="C">
+                    <?php the_field('main_title_for__step_c',false,false); ?>
+                </h2>
 
-                    <?php
+                <?php the_field('first_list_of_items_c'); ?>
 
-                endwhile;
-            endif; ?>
+                <?php the_field('second_list_of_items_c'); ?>
+
+            </div>
+            <!-- /project-management__step -->
 
 
 
