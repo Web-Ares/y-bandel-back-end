@@ -35,10 +35,10 @@ get_header(); ?>
 
                 <img src="<?php echo TEMPLATEURI;?>/dist/pic/project-management_pic-A.png" alt="">
 
-                <h2 class="project-management__title" data-letter="A">
+                <div class="project-management__title" data-letter="A">
 
                     <?php the_field('main_title_for__step_a',false,false); ?>
-                </h2>
+                </div>
 
                 <?php the_field('list_of_items'); ?>
 
@@ -52,9 +52,9 @@ get_header(); ?>
 
                 <img src="<?php echo TEMPLATEURI;?>/dist/pic/project-management_pic-B.png" alt="">
 
-                <h2 class="project-management__title" data-letter="B">
+                <div class="project-management__title" data-letter="B">
                     <?php the_field('main_title_for__step_b',false,false); ?>
-                </h2>
+                </div>
 
                 <?php the_field('second_list_of_items_a_copy'); ?>
 
@@ -67,9 +67,9 @@ get_header(); ?>
                 <img src="<?php echo TEMPLATEURI;?>/dist/pic/project-management_pic-C.png" alt="">
 
 
-                <h2 class="project-management__title" data-letter="C">
+                <div class="project-management__title" data-letter="C">
                     <?php the_field('main_title_for__step_c',false,false); ?>
-                </h2>
+                </div>
 
                 <?php the_field('first_list_of_items_c'); ?>
 
