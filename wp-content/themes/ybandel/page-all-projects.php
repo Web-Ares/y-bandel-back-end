@@ -132,11 +132,11 @@ get_header(); ?>
                             <span class="filter__value">
 
                                <!-- filter__value-mobile -->
-                                <span class="filter__value-mobile">6K-15K מ״ר</span>
+                                <span class="filter__value-mobile">6K+ מ״ר</span>
                                 <!-- /filter__value-mobile -->
 
                                 <!-- filter__value-desktop -->
-                                <span class="filter__value-desktop">6,000-15,000 מ״ר</span>
+                                <span class="filter__value-desktop">6,000 + מ״ר</span>
                                 <!-- /filter__value-desktop -->
 
                             </span>
