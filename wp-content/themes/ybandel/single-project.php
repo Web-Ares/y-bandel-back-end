@@ -115,7 +115,7 @@
                             <?php the_field('project_description'); ?>
                         </div>
                         <div class="project__info-row project__info-row_half">
-                            <span class="project__info-title">אדריכלv</span>
+                            <span class="project__info-title">אדריכל</span>
                             <?php the_field('project_architect'); ?>
                         </div>
                         <div class="project__info-row project__info-row_half">
