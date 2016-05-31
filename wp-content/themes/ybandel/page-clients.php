@@ -39,19 +39,21 @@ get_header(); ?>
                 $tmp = $post;
 
                 $posts = get_posts( array(
-                        'post_type'  => 'project',
+                        'post_type'  => 'clients',
                         'posts_per_page' => -1,
                     )
                 );
 
                 $count = 0;
                 foreach($posts as $post){setup_postdata($post);
-                    $client_logo = get_field('clients_logo');
+                    $thumb_id = get_post_thumbnail_id();
+                    $thumb_url = wp_get_attachment_image_src($thumb_id,'full')[0];
+
 
                 ?>
 
                     <!-- clients__item -->
-                    <div class="clients__item"><img src="<?php echo $client_logo; ?>" alt="<?php echo $post->name; ?>"></div>
+                    <div class="clients__item"><img src="<?php echo $thumb_url; ?>" alt="<?php echo $post->name; ?>"></div>
                     <!-- /clients__item -->
 
                 <?php $count++; } ?>

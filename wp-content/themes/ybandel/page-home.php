@@ -56,15 +56,34 @@ get_header(); ?>
                                 <!-- main__clients-item -->
                                 <div class="main__clients-item">
                                     <?php
-                                    $client_logo = get_field('clients_logo');
+                                    $client_obg = get_field('clients_logo');
+                                    $client_logo = get_field('choose_the_client');
+                                    $thumb_id = '';
+                                    $thumb_url = '';
+                                    if($client_logo) {
+                                        $thumb_id = get_post_thumbnail_id($client_logo);
+                                        $thumb_url = wp_get_attachment_image_src($thumb_id,'full')[0];
+                                    }
+
+
+
                                     $client_descr =  get_field('description_field',false, false);
+                                    $client_aut =  get_field('autor_field');
+                                    $client_comp =  get_field('company_name');
 
                                     if($position==1){ ?>
-                                        <span class="main__clients-pic"><img src="<?php echo $client_logo; ?>" alt="Microsoft"></span>
-                                        <span class="main__clients-description"><?php echo $client_descr; ?></span>
+                                        <span class="main__clients-pic"><img src="<?php echo $thumb_url; ?>" alt="Microsoft"></span>
+                                        <span class="main__clients-description">
+                                            <?php echo $client_descr; ?>
+                                            <strong><?php echo $client_aut; ?></strong>
+                                            <span class="main__clients-author"><?php echo $client_comp; ?></span>
+                                        </span>
                                     <?php } else { ?>
-                                        <span class="main__clients-description"><?php echo $client_descr; ?></span>
-                                        <span class="main__clients-pic"><img src="<?php echo $client_logo; ?>" alt="Microsoft"></span>
+                                        <span class="main__clients-description"><?php echo $client_descr; ?>
+                                            <strong><?php echo $client_aut; ?></strong>
+                                            <span class="main__clients-author"><?php echo $client_comp; ?></span>
+                                        </span>
+                                        <span class="main__clients-pic"><img src="<?php echo $thumb_url; ?>" alt="Microsoft"></span>
                                    <?php }?>
                                 </div>
                                 <!-- /main__clients-item -->

@@ -201,7 +201,7 @@ get_header(); ?>
                         <div class="all-works__item">
 
                             <!-- all-works__pic -->
-                            <div class="all-works__pic" style="background-image: url('<?php echo $thumb_url; ?>')"></div>
+                            <a href="<?php the_permalink(); ?>" class="all-works__pic" style="background-image: url('<?php echo $thumb_url; ?>')"></a>
                             <!-- /all-works__pic -->
 
                             <!-- all-works__footer -->
