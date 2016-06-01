@@ -74,4 +74,40 @@ function custom_post_type()
 
     register_post_type('clients', $args);
 
+
+    $labels = array(
+
+        'name' => 'Quotes',
+        'singular_name' => 'Quotes',
+        'menu_name' => 'Quotes',
+        'all_items' => 'All Quotes',
+        'view_item' => 'View Quotes',
+        'add_new_item' => 'Add Quotes',
+        'add_new' => 'Add Quotes',
+        'edit_item' => 'Edit',
+        'update_item' => 'Update',
+        'search_items' => 'Search'
+    );
+
+
+    $args = array(
+        'labels' => $labels,
+        'supports' => array('title','thumbnail','editor'),
+        'hierarchical' => false,
+        'public' => true,
+        'show_ui' => true,
+        'show_in_menu' => true,
+        'show_in_admin_bar' => true,
+        'can_export' => true,
+        'has_archive' => false,
+        'exclude_from_search' => true,
+        'publicly_queryable' => true,
+        'capability_type' => 'post',
+        'rewrite' => array(
+            'with_front' => true
+        )
+    );
+
+    register_post_type('quotes', $args);
+
 }

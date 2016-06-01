@@ -354,6 +354,7 @@ function get_posts_current(){
         'paged' => $paged,
         'post_type' => 'project',
         'posts_per_page' => '6',
+        'post_status' => 'publish',
         'meta_query' => array(
             'relation' => 'OR',
             $range_1,

@@ -37,14 +37,15 @@ get_header(); ?>
                         $tmp = $post;
 
                         $posts = get_posts( array(
-                            'post_type'  => 'project',
+                            'post_type'  => 'quotes',
                             'posts_per_page' => -1,
                             )
                         );
 
                         $position = 1;
                         foreach($posts as $post){setup_postdata($post);
-                        if(get_field('data_for_slide_on_home_page')[0]=='show'){
+
+                        if(get_field('show_on_home_page')=='show'){
                             if($position!=1 && $position==3){ $position = 1;
                                 echo '</div>
                                     <!-- /swiper-slide -->
@@ -56,7 +57,9 @@ get_header(); ?>
                                 <!-- main__clients-item -->
                                 <div class="main__clients-item">
                                     <?php
-                                    $client_obg = get_field('clients_logo');
+
+
+
                                     $client_logo = get_field('choose_the_client');
                                     $thumb_id = '';
                                     $thumb_url = '';
@@ -67,7 +70,8 @@ get_header(); ?>
 
 
 
-                                    $client_descr =  get_field('description_field',false, false);
+                                    $client_descr =  get_field('description_field',false, false); get_the_content();
+                                    $client_descr =   get_the_content();
                                     $client_aut =  get_field('autor_field');
                                     $client_comp =  get_field('company_name');
 

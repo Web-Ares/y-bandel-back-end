@@ -73,9 +73,15 @@
 
             <!-- project__wrap -->
             <aside class="project__wrap">
-
+                <?php    $client_logo = get_field('choose_the_client');
+                $thumb_id = '';
+                $thumb_url = '';
+                if($client_logo) {
+                    $thumb_id = get_post_thumbnail_id($client_logo);
+                    $thumb_url = wp_get_attachment_image_src($thumb_id,'full')[0];
+                }?>
                 <!-- project__logo -->
-                <h1 class="project__logo"><img src="<?php the_field('clients_logo'); ?>" alt="Leverate"></h1>
+                <h1 class="project__logo"><img src="<?php echo $thumb_url; ?>" alt="<?php the_title($client_logo); ?>"></h1>
                 <!-- /project__logo -->
 
 
