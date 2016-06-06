@@ -42,7 +42,7 @@ get_header(); ?>
                             <span class="filter__value">
 
                                 <!-- filter__value-mobile -->
-                                <span class="filter__value-mobile">100-1K מ״ר</span>
+                                <span class="filter__value-mobile">100-1<span>K</span> מ״ר</span>
                                 <!-- /filter__value-mobile -->
 
                                 <!-- filter__value-desktop -->
@@ -72,7 +72,7 @@ get_header(); ?>
                             <span class="filter__value">
 
                                 <!-- filter__value-mobile -->
-                                <span class="filter__value-mobile">1K-3K מ״ר</span>
+                                <span class="filter__value-mobile">1<span>K</span>-3<span>K</span> מ״ר</span>
                                 <!-- /filter__value-mobile -->
 
                                 <!-- filter__value-desktop -->
@@ -102,7 +102,7 @@ get_header(); ?>
                             <span class="filter__value">
 
                                 <!-- filter__value-mobile -->
-                                <span class="filter__value-mobile">3K-6K מ״ר</span>
+                                <span class="filter__value-mobile">3<span>K</span>-6<span>K</span> מ״ר</span>
                                 <!-- /filter__value-mobile -->
 
                                 <!-- filter__value-desktop -->
@@ -132,7 +132,7 @@ get_header(); ?>
                             <span class="filter__value">
 
                                <!-- filter__value-mobile -->
-                                <span class="filter__value-mobile">6K+ מ״ר</span>
+                                <span class="filter__value-mobile">6<span>K</span>+ מ״ר</span>
                                 <!-- /filter__value-mobile -->
 
                                 <!-- filter__value-desktop -->

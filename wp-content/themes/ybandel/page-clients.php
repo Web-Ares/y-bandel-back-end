@@ -27,7 +27,7 @@ get_header(); ?>
                 <strong class="clients__founder-title"><?php the_field('main_text_on_page'); ?></strong>
                 <!-- /clients__founder-title -->
 
-                <p><?php the_field('description_text'); ?></p>
+             <?php the_field('description_text'); ?>
 
             </div>
             <!-- /clients__founder -->

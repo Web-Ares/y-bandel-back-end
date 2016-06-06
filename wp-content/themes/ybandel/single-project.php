@@ -153,9 +153,13 @@
 
                 <p><?php the_field('the_project_objective_text'); ?></p>
 
+
+                <!--project__same-->
+                <div class="project__same">
+
                 <h2 class="project__title">פרוייקטים דומים    </h2>
-                <!-- project__like -->
-                <div class="project__like">
+                    <!-- project__like -->
+                    <div class="project__like">
                 <?php
                 $arg = array(
                 'post_type'  => 'project',
@@ -205,7 +209,10 @@
                 wp_reset_postdata();
                ?>
                 </div>
-                <!-- /project__like -->
+                    <!-- /project__like -->
+
+                </div>
+                <!--/project__same-->
 
             </aside>
             <!-- /project__wrap -->
