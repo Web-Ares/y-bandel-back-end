@@ -200,7 +200,7 @@
                     <div class="project__like-row">
                         <div class="project__like-column"><?php echo $like_title; ?></div>
                         <div class="project__like-column"><?php echo $cur_footage; ?></div>
-                        <div class="project__like-column"><?php the_field('project_footage'); ?><span>m<sup>2</sup></span></div>
+                        <div class="project__like-column project__like-square"><?php the_field('project_footage'); ?><span>m<sup>2</sup></span></div>
                         <div class="project__like-column"><a href="<?php the_permalink(); ?>" class="btn btn_2"></a></div>
                     </div>
 
@@ -229,7 +229,12 @@
                             <div class="project__pic-wrap">
                                 <!-- project__pic-item -->
                                 <span class="project__pic-item" style="background-image: url('<?php the_sub_field('one_picture'); ?>')">
-                                    <span><?php the_sub_field('one_picture_descr'); ?></span>
+
+                                        <?php if($descr1 = get_sub_field('one_picture_descr')){ ?>
+                                    <span><?php echo $descr1;  ?></span>
+                                        <?php } ?>
+
+
                                 </span>
                                 <!-- /project__pic-item -->
                             </div>
@@ -240,12 +245,20 @@
                             <div class="project__pic-wrap project__pic-wrap_type2">
                                 <!-- project__pic-item -->
                                 <span class="project__pic-item" style="background-image: url('<?php the_sub_field('first_image_in_block'); ?>')">
-                                    <span><?php the_sub_field('first_image_in_block_descr'); ?></span>
+
+                                    <?php if($descr2 = get_sub_field('first_image_in_block_descr')){ ?>
+                                        <span><?php echo $descr2;  ?></span>
+                                    <?php } ?>
+
                                 </span>
                                 <!-- /project__pic-item -->
                                 <!-- project__pic-item -->
                                 <span class="project__pic-item" style="background-image: url('<?php the_sub_field('second_image_in_block'); ?>')">
-                                    <span><?php the_sub_field('second_image_in_block_descr'); ?></span>
+
+                                    <?php if($descr3 = get_sub_field('second_image_in_block_descr')){ ?>
+                                        <span><?php echo $descr3;  ?></span>
+                                    <?php } ?>
+
                                 </span>
                                 <!-- /project__pic-item -->
                             </div>
@@ -256,12 +269,20 @@
                             <div class="project__pic-wrap project__pic-wrap_type3">
                                 <!-- project__pic-item -->
                                 <span class="project__pic-item" style="background-image: url('<?php the_sub_field('first_image'); ?>')">
-                                    <span><?php the_sub_field('first_image_descr'); ?></span>
+
+                                    <?php if($descr4 = get_sub_field('first_image_descr')){ ?>
+                                        <span><?php echo $descr4;  ?></span>
+                                    <?php } ?>
+
                                 </span>
                                 <!-- /project__pic-item -->
                                 <!-- project__pic-item -->
                                 <span class="project__pic-item" style="background-image: url('<?php the_sub_field('second_image'); ?>')">
-                                    <span><?php the_sub_field('second_image_descr'); ?></span>
+
+                                    <?php if($descr5 = get_sub_field('second_image_descr')){ ?>
+                                        <span><?php echo $descr5;  ?></span>
+                                    <?php } ?>
+
                                 </span>
                                 <!-- /project__pic-item -->
                             </div>

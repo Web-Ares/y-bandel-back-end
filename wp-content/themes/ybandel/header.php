@@ -6,6 +6,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="format-detection" content="address=no">
     <meta charset="UTF-8">
+    <link rel='shortcut icon' type='image/x-icon' href='<?php echo TEMPLATEURI; ?>/dist/img/favicon.ico' />
     <title><?php document_title(); ?></title>
     <?php wp_head(); ?>
 </head>
