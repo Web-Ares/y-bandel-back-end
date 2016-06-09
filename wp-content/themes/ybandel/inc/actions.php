@@ -114,6 +114,10 @@ function add_js()
         wp_enqueue_script('swiper');
         wp_register_script('script-nicescroll',get_template_directory_uri().'/dist/js/vendors/jquery.nicescroll.min.js');
         wp_enqueue_script('script-nicescroll');
+        wp_register_script('fancy',get_template_directory_uri().'/dist/js/vendors/fancybox.js');
+        wp_enqueue_script('fancy');
+
+
     }
 
     wp_register_script('app',get_template_directory_uri().'/dist/js/app.min.js');

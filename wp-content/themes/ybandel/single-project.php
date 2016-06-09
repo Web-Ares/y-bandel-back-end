@@ -228,14 +228,16 @@
                             <!-- project__pic-wrap -->
                             <div class="project__pic-wrap">
                                 <!-- project__pic-item -->
-                                <span class="project__pic-item" style="background-image: url('<?php the_sub_field('one_picture'); ?>')">
+
+                                <?php $cur_image = get_sub_field('one_picture'); ?>
+                                <a href="<?php echo $cur_image; ?>" rel="image-1" class="project__pic-item" style="background-image: url('<?php echo $cur_image;  ?>')">
 
                                         <?php if($descr1 = get_sub_field('one_picture_descr')){ ?>
                                     <span><?php echo $descr1;  ?></span>
                                         <?php } ?>
 
 
-                                </span>
+                                </a>
                                 <!-- /project__pic-item -->
                             </div>
                             <!-- /project__pic-wrap -->
@@ -244,22 +246,27 @@
                             <!-- project__pic-wrap -->
                             <div class="project__pic-wrap project__pic-wrap_type2">
                                 <!-- project__pic-item -->
-                                <span class="project__pic-item" style="background-image: url('<?php the_sub_field('first_image_in_block'); ?>')">
+
+
+                                <?php $cur_image2 = get_sub_field('first_image_in_block'); ?>
+                                <a href="<?php echo $cur_image2; ?>" rel="image-1" class="project__pic-item" style="background-image: url('<?php echo $cur_image2; ?>')">
 
                                     <?php if($descr2 = get_sub_field('first_image_in_block_descr')){ ?>
                                         <span><?php echo $descr2;  ?></span>
                                     <?php } ?>
 
-                                </span>
+                                </a>
                                 <!-- /project__pic-item -->
+
                                 <!-- project__pic-item -->
-                                <span class="project__pic-item" style="background-image: url('<?php the_sub_field('second_image_in_block'); ?>')">
+                                <?php $cur_image3 = get_sub_field('second_image_in_block'); ?>
+                                <a href="<?php echo $cur_image3; ?>" rel="image-1" class="project__pic-item" style="background-image: url('<?php echo $cur_image3; ?>')">
 
                                     <?php if($descr3 = get_sub_field('second_image_in_block_descr')){ ?>
                                         <span><?php echo $descr3;  ?></span>
                                     <?php } ?>
 
-                                </span>
+                                </a>
                                 <!-- /project__pic-item -->
                             </div>
                             <!-- /project__pic-wrap -->
@@ -268,22 +275,24 @@
                             <!-- project__pic-wrap -->
                             <div class="project__pic-wrap project__pic-wrap_type3">
                                 <!-- project__pic-item -->
-                                <span class="project__pic-item" style="background-image: url('<?php the_sub_field('first_image'); ?>')">
+                                <?php $cur_image4 = get_sub_field('first_image'); ?>
+                                <a href="<?php echo $cur_image4; ?>" rel="image-1" class="project__pic-item" style="background-image: url('<?php echo $cur_image4; ?>')">
 
                                     <?php if($descr4 = get_sub_field('first_image_descr')){ ?>
                                         <span><?php echo $descr4;  ?></span>
                                     <?php } ?>
 
-                                </span>
+                                </a>
                                 <!-- /project__pic-item -->
                                 <!-- project__pic-item -->
-                                <span class="project__pic-item" style="background-image: url('<?php the_sub_field('second_image'); ?>')">
+                                <?php $cur_image5 = get_sub_field('second_image'); ?>
+                                <a href="<?php echo $cur_image5; ?>" rel="image-1" class="project__pic-item" style="background-image: url('<?php echo $cur_image5; ?>')">
 
                                     <?php if($descr5 = get_sub_field('second_image_descr')){ ?>
                                         <span><?php echo $descr5;  ?></span>
                                     <?php } ?>
 
-                                </span>
+                                </a>
                                 <!-- /project__pic-item -->
                             </div>
                             <!-- /project__pic-wrap -->
