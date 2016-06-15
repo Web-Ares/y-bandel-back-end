@@ -154,12 +154,7 @@
                 <p><?php the_field('the_project_objective_text'); ?></p>
 
 
-                <!--project__same-->
-                <div class="project__same">
 
-                <h2 class="project__title">פרוייקטים דומים    </h2>
-                    <!-- project__like -->
-                    <div class="project__like">
                 <?php
                 $arg = array(
                 'post_type'  => 'project',
@@ -176,9 +171,17 @@
                 );
                 $like = new WP_Query( $arg );
 
-                if( $like->have_posts() ) :
+                if( $like->have_posts() ) : ?>
 
-                while( $like->have_posts() ) : $like->the_post();
+                <!--project__same-->
+                <div class="project__same">
+
+                    <h2 class="project__title">פרוייקטים דומים    </h2>
+                    <!-- project__like -->
+                    <div class="project__like">
+
+
+               <?php  while( $like->have_posts() ) : $like->the_post();
                      $like_title = get_the_title();
                     ?>
                     <?php  $current_icon_footage = get_field('project_footage');
@@ -204,15 +207,16 @@
                         <div class="project__like-column"><a href="<?php the_permalink(); ?>" class="btn btn_2"></a></div>
                     </div>
 
-               <?php endwhile;
-                endif;
-                wp_reset_postdata();
-               ?>
-                </div>
+               <?php endwhile; ?>
+                    </div>
                     <!-- /project__like -->
 
                 </div>
-                <!--/project__same-->
+                    <!--/project__same-->
+               <?php endif;
+                wp_reset_postdata();
+               ?>
+
 
             </aside>
             <!-- /project__wrap -->
