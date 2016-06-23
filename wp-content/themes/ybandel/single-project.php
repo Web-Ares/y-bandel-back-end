@@ -152,8 +152,20 @@
                 <h2 class="project__title">האתגר</h2>
 
                 <p><?php the_field('the_project_objective_text'); ?></p>
+                <?php $testim_id = get_field('choose_the_qoute_for_this_project');
 
+                ?>
 
+                <div class="project__quote">
+                    <?php
+                    $content_tes = get_post($testim_id);
+
+                    echo $content_tes->post_content; ?>
+
+                    <div class="project__quote-author">
+                        <strong><?php the_field('autor_field',$content_tes); ?></strong> <?php the_field('company_name',$content_tes); ?>
+                    </div>
+                </div>
 
                 <?php
                 $arg = array(
