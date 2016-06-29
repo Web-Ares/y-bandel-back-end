@@ -23,7 +23,16 @@ get_header(); ?>
             <!-- /all-works__title -->
             <!-- filter -->
             <form action="#" class="filter">
+                <?php
 
+                $cur_slug = pll_current_language('slug');
+
+                if($cur_slug=='he'){
+                    $metr = ' מ״ר';
+                } else {
+                    $metr = '<span>m<sup>2</sup></span>';
+                }
+                ?>
                 <!-- filter__wrap -->
                 <div class="filter__wrap">
 
@@ -42,11 +51,11 @@ get_header(); ?>
                             <span class="filter__value">
 
                                 <!-- filter__value-mobile -->
-                                <span class="filter__value-mobile">100-1<span>K</span> מ״ר</span>
+                                <span class="filter__value-mobile">100-1<span>K</span> <?php echo $metr; ?></span>
                                 <!-- /filter__value-mobile -->
 
                                 <!-- filter__value-desktop -->
-                                <span class="filter__value-desktop">100-1,000 מ״ר</span>
+                                <span class="filter__value-desktop">100-1,000 <?php echo $metr; ?></span>
                                 <!-- /filter__value-desktop -->
 
                             </span>
@@ -72,11 +81,11 @@ get_header(); ?>
                             <span class="filter__value">
 
                                 <!-- filter__value-mobile -->
-                                <span class="filter__value-mobile">1<span>K</span>-3<span>K</span> מ״ר</span>
+                                <span class="filter__value-mobile">1<span>K</span>-3<span>K</span> <?php echo $metr; ?></span>
                                 <!-- /filter__value-mobile -->
 
                                 <!-- filter__value-desktop -->
-                                <span class="filter__value-desktop">1,000-3,000 מ״ר</span>
+                                <span class="filter__value-desktop">1,000-3,000 <?php echo $metr; ?></span>
                                 <!-- /filter__value-desktop -->
 
                             </span>
@@ -102,11 +111,11 @@ get_header(); ?>
                             <span class="filter__value">
 
                                 <!-- filter__value-mobile -->
-                                <span class="filter__value-mobile">3<span>K</span>-6<span>K</span> מ״ר</span>
+                                <span class="filter__value-mobile">3<span>K</span>-6<span>K</span> <?php echo $metr; ?></span>
                                 <!-- /filter__value-mobile -->
 
                                 <!-- filter__value-desktop -->
-                                <span class="filter__value-desktop">3,000-6,000 מ״ר</span>
+                                <span class="filter__value-desktop">3,000-6,000 <?php echo $metr; ?></span>
                                 <!-- /filter__value-desktop -->
 
                             </span>
@@ -132,11 +141,11 @@ get_header(); ?>
                             <span class="filter__value">
 
                                <!-- filter__value-mobile -->
-                                <span class="filter__value-mobile">6<span>K</span>+ מ״ר</span>
+                                <span class="filter__value-mobile">6<span>K</span> <?php echo $metr; ?></span>
                                 <!-- /filter__value-mobile -->
 
                                 <!-- filter__value-desktop -->
-                                <span class="filter__value-desktop">6,000 + מ״ר</span>
+                                <span class="filter__value-desktop">6,000 + <?php echo $metr; ?></span>
                                 <!-- /filter__value-desktop -->
 
                             </span>
@@ -204,27 +213,15 @@ get_header(); ?>
                             <a href="<?php the_permalink(); ?>" class="all-works__pic" style="background-image: url('<?php echo $thumb_url; ?>')"></a>
                             <!-- /all-works__pic -->
 
-                            <!-- all-works__footer -->
-                            <div class="all-works__footer">
-
-                                <!-- all-works__name -->
-                                <span class="all-works__name"><?php the_title();?></span>
-                                <!-- /all-works__name -->
-
-                                <!-- all-works__icon -->
-                                <span class="all-works__icon"><?php echo $cur_footage;?></span>
-                                <!-- /all-works__icon -->
-
-                                <!-- all-works__square -->
-                                <span class="all-works__square"><?php the_field('project_footage'); ?><span>m<span>2</span></span></span>
-                                <!-- /all-works__square -->
-
-                                <!-- btn -->
-                                <a href="<?php the_permalink(); ?>" class="btn btn_2"></a>
-                                <!-- /btn -->
-
+                            <!-- all-works__info -->
+                            <div class="all-works__info">
+                                <div class="all-works__info-column"><?php the_title();?></div>
+                                <div class="all-works__info-column"><?php echo $cur_footage;?></div>
+                                <div class="all-works__info-column all-works__info-square"><?php the_field('project_footage'); ?><span>m<sup>2</sup></span></div>
+                                <div class="all-works__info-column"><a href="<?php the_permalink(); ?>" class="btn btn_2"></a></div>
                             </div>
-                            <!-- /all-works__footer -->
+                            <!-- /all-works__info -->
+
 
                         </div>
                         <!-- /all-works__item -->

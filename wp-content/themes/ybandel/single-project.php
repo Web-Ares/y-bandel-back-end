@@ -110,34 +110,59 @@
                     $title = get_the_title();
                     $cur_id = get_the_ID();
                    ?>
-                    
+
+                    <?php
+
+                    $cur_slug = pll_current_language('slug');
+
+                    if($cur_slug=='he'){
+                      $title = 'שם הפרוייקט';
+                        $description = 'תיאור הפרוייקט';
+                        $architect = 'אדריכל';
+                        $occup = 'תחום עיסוק';
+                        $location = 'מיקום';
+                        $chalenge = 'האתגר';
+                        $similar = 'פרוייקטים דומים    ';
+                        $surface = 'שטח';
+                    } else {
+                        $title="name of project";
+                        $description = 'project description';
+                        $architect = 'architect';
+                        $occup = 'occupation';
+                        $location = 'location';
+                        $chalenge = 'The challenge';
+                        $similar = 'similar projects';
+                        $surface = 'surface';
+                    }
+                    ?>
+
+
                     <div class="project__info-column">
                         <div class="project__info-row">
-                            <span class="project__info-title">שם הפרוייקט</span>
-                            <strong><?php echo $title; ?></strong>
+                            <span class="project__info-title"><?php echo $title;?></span>
+                            <strong><?php the_title(); ?></strong>
                         </div>
                         <div class="project__info-row">
-                            <span class="project__info-title">תיאור הפרוייקט</span>
+                            <span class="project__info-title"><?php echo $description;?></span>
                             <?php the_field('project_description'); ?>
                         </div>
                         <div class="project__info-row project__info-row_half">
-                            <span class="project__info-title">אדריכל</span>
+                            <span class="project__info-title"><?php echo $architect;?></span>
                             <?php the_field('project_architect'); ?>
                         </div>
                         <div class="project__info-row project__info-row_half">
-                            <span class="project__info-title">תחום עיסוק</span>
+                            <span class="project__info-title"><?php echo $occup;?></span>
                             <?php the_field('project__occupation'); ?>
                         </div>
                         <div class="project__info-row">
-                            <span class="project__info-title">מיקום</span>
+                            <span class="project__info-title"><?php echo $location; ?></span>
                             <?php the_field('project_location'); ?>
                         </div>
                     </div>
 
                     <div class="project__info-column">
                         <div class="project__info-row project__info-row_square">
-
-                            שטח
+                            <?php echo $surface; ?>
                             <p><?php the_field('project_footage'); ?><span>m<sup>2</sup></span></p>
 
                         </div>
@@ -149,7 +174,7 @@
                 </div>
                 <!-- /project__info -->
 
-                <h2 class="project__title">האתגר</h2>
+                <h2 class="project__title"><?php echo $chalenge; ?></h2>
 
                 <p><?php the_field('the_project_objective_text'); ?></p>
                 <?php $testim_id = get_field('choose_the_qoute_for_this_project');
@@ -188,7 +213,7 @@
                 <!--project__same-->
                 <div class="project__same">
 
-                    <h2 class="project__title">פרוייקטים דומים    </h2>
+                    <h2 class="project__title"><?php echo $similar; ?></h2>
                     <!-- project__like -->
                     <div class="project__like">
 

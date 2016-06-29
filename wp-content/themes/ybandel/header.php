@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="he" dir="rtl">
+<html <?php language_attributes(); ?>>
 <head>
     <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="format-detection" content="telephone=no">
@@ -12,9 +12,16 @@
 <body data-action="<?php echo admin_url( 'admin-ajax.php' );?>">
 <?php if (is_page() || is_single() || is_singular() || is_404()) {
     the_post();
-} ?>
+}
+
+
+$cur_slug = pll_current_language('slug');
+if($cur_slug=='en'){
+    $cur_lang = ' lang_en';
+}
+?>
 <!-- site -->
-<div class="site">
+<div class="site<?php echo $cur_lang; ?>">
 
     <!-- menu-btn -->
     <span class="menu-btn"></span>
@@ -47,6 +54,14 @@
                 $menu_items = wp_get_nav_menu_items($locations['menu']);
 
                 foreach ((array)$menu_items as $key => $menu_item) {
+
+                    if($menu_item->post_title=='Language switcher'){
+                        $lang_l='';
+                        $lang_url = $menu_item->url;
+                        $lang_l = $menu_item->lang;
+                        continue;
+                    }
+
                     if($post->ID==$menu_item->object_id){
                         $active = 'active';
                     } else {
@@ -63,8 +78,23 @@
 
                 <?php }; ?>
 
+
+
+            <?php ?>
         </nav>
         <!-- /menu -->
+        <!--lang-switcher-->
+        <div class="lang-switcher">
+        <?php if($lang_l=='he-IL'){ ?>
+            <span class="active">EN</span>
+            <a href="<?php echo $lang_url;?>">HE</a>
+        <?php } else { ?>
+            <span class="active">HE</span>
+            <a href="<?php echo $lang_url;?>">EN</a>
+        <?php } ?>
+
+        </div>
+       <!--/lang-switcher-->
 
     </header>
     <!-- /site__header -->
