@@ -8,9 +8,11 @@
     <meta charset="UTF-8">
     <title>About us</title>
 
+    <link rel='shortcut icon' type='image/x-icon' href='img/favicon.ico' />
+
     <link rel="stylesheet" href="css/contact-us_page.css">
     <script src="js/vendors/jquery-2.1.4.min.js"></script>
-    <script src="js/vendors/swiper.jquery.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAPwW5SgDhOwU2uLHXnbTWdupoDjpRchhY&language=iw" type="text/javascript"></script>
     <script src="js/vendors/jquery.nicescroll.min.js"></script>
     <script src="js/app.min.js"></script>
 </head>
@@ -73,6 +75,11 @@
                 <!-- site__form -->
                 <form action="php/form.php" class="site__form form-validation" novalidate>
 
+                    <div class="site__form-thank-you">
+                        <span>תודה על פנייתך,</span>
+                        אנו נחזור אליך בהקדם
+                    </div>
+
                     <fieldset>
                         <input type="text" name="name" placeholder="שם מלא" required>
                     </fieldset>
@@ -111,7 +118,7 @@
                         <!-- site__form-submit -->
                         <div class="site__form-submit">
                             <button type="submit" class="btn">שלח</button>
-                            <span class="site__form-sent"><span>הנתונים נשלחים</span></span>
+                            <!--<span class="site__form-sent"><span>הנתונים נשלחים</span></span>-->
                         </div>
                         <!-- /site__form-submit -->
 
@@ -150,6 +157,10 @@
 
             </div>
             <!-- /contact-us__wrapper -->
+
+            <!-- map -->
+            <div class="map" data-center="[32.173575, 34.875478]" id="map"></div>
+            <!-- /map -->
 
         </div>
         <!-- /contact-us -->

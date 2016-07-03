@@ -131,7 +131,7 @@
                         $occup = 'occupation';
                         $location = 'location';
                         $chalenge = 'The challenge';
-                        $similar = 'similar projects';
+                        $similar = 'Similar Projects';
                         $surface = 'surface';
                     }
                     ?>

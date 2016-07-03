@@ -20,10 +20,17 @@ get_header(); ?>
             <!-- main__title -->
             <h2 class="main__title"><?php the_field('main_title_text')?></h2>
             <!-- /main__title -->
+            <?php
 
+            $cur_slug = pll_current_language('slug');
+
+            if($cur_slug=='he'){
+            $clients = 'בין לקוחותינו';} else {
+                $clients = 'Our customers';
+            } ?>
             <!-- main__clients -->
             <div class="main__clients">
-                <h3 class="main__clients-title">בין לקוחותינו</h3>
+                <h3 class="main__clients-title"><?php echo $clients; ?></h3>
 
                 <!-- swiper-container -->
                 <div class="swiper-container">

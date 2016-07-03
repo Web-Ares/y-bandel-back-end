@@ -91,8 +91,14 @@ function add_js()
 
     }
     if( is_page_template('page-contact.php') ){
+        $cur_slug = pll_current_language('slug');
 
+        if($cur_slug=='he'){
+            $lang = '&language=iw';
+        }
         wp_enqueue_style('home', get_template_directory_uri().'/dist/css/contact-us_page.css');
+        wp_register_script('google_cart','https://maps.googleapis.com/maps/api/js?key=AIzaSyAPwW5SgDhOwU2uLHXnbTWdupoDjpRchhY'.$lang);
+        wp_enqueue_script('google_cart');
         wp_register_script('swiper',get_template_directory_uri().'/dist/js/vendors/swiper.jquery.min.js');
         wp_enqueue_script('swiper');
         wp_register_script('script-nicescroll',get_template_directory_uri().'/dist/js/vendors/jquery.nicescroll.min.js');

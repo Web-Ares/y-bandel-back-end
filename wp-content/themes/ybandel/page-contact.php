@@ -82,6 +82,10 @@ get_header(); ?>
             </div>
             <!-- /contact-us__wrapper -->
 
+            <!-- map -->
+            <div class="map" data-center="[<?php the_field('choose_the_address'); ?>]" id="map"></div>
+            <!-- /map -->
+
         </div>
         <!-- /contact-us -->
 

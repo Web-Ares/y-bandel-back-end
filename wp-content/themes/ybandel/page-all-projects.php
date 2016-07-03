@@ -15,7 +15,7 @@ get_header(); ?>
             <!-- /site__page -->
 
             <!-- site__title -->
-            <h1 class="site__title"><?php the_field('main_title'); ?></h1>
+            <h1 class="site__title"><?php the_title(); ?></h1>
             <!-- /site__title -->
 
             <!-- all-works__title -->

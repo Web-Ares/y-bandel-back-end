@@ -78,23 +78,22 @@ if($cur_slug=='en'){
 
                 <?php }; ?>
 
+            <!--lang-switcher-->
+            <div class="lang-switcher">
+                <?php if($lang_l=='he-IL'){ ?>
+                    <span class="active">EN</span>
+                    <a href="<?php echo $lang_url;?>">HE</a>
+                <?php } else { ?>
+                    <span class="active">HE</span>
+                    <a href="<?php echo $lang_url;?>">EN</a>
+                <?php } ?>
 
+            </div>
+            <!--/lang-switcher-->
 
-            <?php ?>
         </nav>
         <!-- /menu -->
-        <!--lang-switcher-->
-        <div class="lang-switcher">
-        <?php if($lang_l=='he-IL'){ ?>
-            <span class="active">EN</span>
-            <a href="<?php echo $lang_url;?>">HE</a>
-        <?php } else { ?>
-            <span class="active">HE</span>
-            <a href="<?php echo $lang_url;?>">EN</a>
-        <?php } ?>
 
-        </div>
-       <!--/lang-switcher-->
 
     </header>
     <!-- /site__header -->
