@@ -56,26 +56,42 @@ get_header(); ?>
                         $fax = 'fax:';
                         $email = 'email:';
                     }
-                    ?>
-
+                    
+                    $field_phone  = get_field('phone');
+                    $field_phone_2  = get_field('phone_2');
+                    $field_fax  = get_field('fax');
+                    $field_email = get_field('e-mail');
+                    
+                    
+                    
+                    if($field_phone):?>
                     <dl>
                         <dt><?php echo $phone; ?></dt>
-                        <dd><?php the_field('phone'); ?></dd>
+                        <dd><?php echo $field_phone; ?></dd>
                     </dl>
+                        <?php endif;
+                    if($field_phone_2):
+                    ?>
                     <dl>
                         <dt><?php echo $phone2; ?></dt>
-                        <dd><?php the_field('phone_2'); ?></dd>
+                        <dd><?php echo $field_phone_2; ?></dd>
                     </dl>
+                    <?php endif;
+                        if($field_fax):
+                            ?>
                     <dl>
                         <dt><?php echo $fax; ?></dt>
-                        <dd><?php the_field('fax'); ?></dd>
+                        <dd><?php echo $field_fax; ?></dd>
                     </dl>
+                    <?php endif;
+                    if($field_email):
+                        ?>
                     <dl>
                         <dt><?php echo $email; ?></dt>
-                        <dd><?php $email = get_field('e-mail'); ?>
-                            <a href="mailto:<?php echo $email; ?>"><?php echo $email; ?></a></dd>
+                        <dd><?php  ?>
+                            <a href="mailto:<?php echo $field_email; ?>"><?php echo $field_email; ?></a></dd>
                     </dl>
-
+                    <?php endif; ?>
                 </address>
                 <!-- /contact-us__address -->
 
