@@ -1,7 +1,16 @@
 <!-- site__footer -->
 <footer class="site__footer">
+    <?php
+    $cur_slug = pll_current_language('slug');
+    if($cur_slug=='en'){
+        $footer = 'All rights reserved ©Y.Bandel Projects Management';
+    } else{
+        $footer = 'בנדל ניהול פרויקטים בניה   סנדאות 11 הרצליה פיתוח  036470984';
+    }
 
-    <span>All rights reserved ©Y.Bandel Projects Management</span>
+
+    ?>
+    <span><?php echo $footer; ?></span>
 
     <a href="http://expiria.me/">Design & development by EXPIRIA</a>
 

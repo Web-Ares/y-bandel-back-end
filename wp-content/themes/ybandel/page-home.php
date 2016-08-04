@@ -161,11 +161,19 @@ get_header(); ?>
                             $sub_class='';
                             }
                             $title_slide = get_the_title();
+
+
                             ?>
 
                             <!-- swiper-slide -->
                             <div class="swiper-slide <?php echo $sub_class;?>">
-                                <img src="<?php the_field('image_for_preview_on_home_page'); ?>" alt="<?php echo $title_slide;?>">
+                                <?php $image_r = get_field('image_for_preview_on_home_page');
+
+                                $link_r = get_field('link', $image_r['ID']);
+
+                                ?>
+
+                                <img src="<?php echo $image_r['url']; ?>" alt="<?php echo $image_r['alt']; ?>">
 
                                 <!-- products-preview -->
                                 <div class="products-preview">

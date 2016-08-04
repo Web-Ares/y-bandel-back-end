@@ -204,18 +204,22 @@ get_header(); ?>
                         elseif($current_icon_footage > 6000){
                             $cur_footage = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 46 46"><path class="cls-1" d="M37.34,10.76L25.9,4.46a0.3,0.3,0,0,0-.29,0l-17.13,9a0.31,0.31,0,0,0-.13.41h0a0.31,0.31,0,0,0-.15.26V27.51a0.31,0.31,0,0,0,.16.27L20,34.19a0.31,0.31,0,0,0,.15,0,0.3,0.3,0,0,0,.16,0,0.31,0.31,0,0,0,.15-0.26V33.84L22,32.89V41.7a0.31,0.31,0,0,0,.15.26,0.3,0.3,0,0,0,.3,0l11.62-6.41a0.31,0.31,0,0,0,.16-0.27V15.86a0.31,0.31,0,0,0-.15-0.26,0.3,0.3,0,0,0-.3,0L22.47,21.83l-2.06-1.06v-0.2a0.3,0.3,0,0,0,0-.09l17-9.17A0.31,0.31,0,0,0,37.34,10.76ZM19.79,33.4l-10.9-6,10.9-6v12Zm-11-6.65V14.68l10.95,6ZM33.64,16.38V35.11l-11,6.07V32.53l9.13-5.39a0.31,0.31,0,0,0,0-.54l-8.61-4.43ZM31,26.9l-8.34,4.92V22.6Zm-9-4.61v9.89l-1.61.95V21.46ZM20,20a0.29,0.29,0,0,0-.09.12L8.81,14,25.75,5.08,36.55,11Z"/></svg>';
                         }
+                        
+                        $name = get_the_title();
                         ?>
 
                         <!-- all-works__item -->
                         <div class="all-works__item">
 
                             <!-- all-works__pic -->
-                            <a href="<?php the_permalink(); ?>" class="all-works__pic" style="background-image: url('<?php echo $thumb_url; ?>')"></a>
+                            <a href="<?php the_permalink(); ?>" class="all-works__pic">
+                                <img src="<?php echo $thumb_url; ?> " alt="<?= $name; ?>">
+                            </a>
                             <!-- /all-works__pic -->
 
                             <!-- all-works__info -->
                             <div class="all-works__info">
-                                <div class="all-works__info-column"><?php the_title();?></div>
+                                <div class="all-works__info-column"><?= $name; ?></div>
                                 <div class="all-works__info-column"><?php echo $cur_footage;?></div>
                                 <div class="all-works__info-column all-works__info-square"><?php the_field('project_footage'); ?><span>m<sup>2</sup></span></div>
                                 <div class="all-works__info-column"><a href="<?php the_permalink(); ?>" class="btn btn_2"></a></div>
