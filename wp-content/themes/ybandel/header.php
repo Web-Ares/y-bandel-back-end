@@ -45,13 +45,13 @@ if($cur_slug=='en'){
         <?php if(is_front_page()){ ?>
             <!-- logo -->
             <h1 class="logo">
-                <img src="<?php echo TEMPLATEURI; ?>/dist/img/logo.png" alt="בנדל ניהול פרויקטים בבניה">
+                <img src="<?php echo TEMPLATEURI; ?>/dist/img/logo.png" alt="בנדל ניהול פרויקטים בבניה" title="בנדל ניהול פרויקטים בבניה" >
             </h1>
             <!-- /logo -->
         <?php } else {?>
         <!-- logo -->
         <a href="<?php echo home_url(); ?>" class="logo">
-            <img src="<?php echo TEMPLATEURI; ?>/dist/img/logo.png" alt="בנדל ניהול פרויקטים בבניה">
+            <img src="<?php echo TEMPLATEURI; ?>/dist/img/logo.png" alt="בנדל ניהול פרויקטים בבניה" title="בנדל ניהול פרויקטים בבניה">
         </a>
         <!-- /logo -->
         <?php } ?>
