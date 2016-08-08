@@ -173,7 +173,7 @@ get_header(); ?>
 
                                 ?>
 
-                                <img src="<?php echo $image_r['url']; ?>" alt="<?php echo $image_r['alt']; ?>">
+                                <img src="<?php echo $image_r['url']; ?>" alt="<?php echo $image_r['alt']; ?>"  title="<?php echo $image_r['title']; ?>">
 
                                 <!-- products-preview -->
                                 <div class="products-preview">

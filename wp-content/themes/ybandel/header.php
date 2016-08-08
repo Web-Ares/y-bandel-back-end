@@ -6,7 +6,7 @@
     <meta name="format-detection" content="address=no">
     <meta charset="UTF-8">
     <link rel='shortcut icon' type='image/x-icon' href='<?php echo TEMPLATEURI; ?>/dist/img/favicon.ico' />
-    <title><?php document_title(); ?></title>
+    <title><?php wp_title(''); ?></title>
     <?php wp_head(); ?>
 </head>
 <body data-action="<?php echo admin_url( 'admin-ajax.php' );?>">

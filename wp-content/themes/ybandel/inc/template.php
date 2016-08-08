@@ -16,7 +16,8 @@ function document_title()
         } else {
             $output = wp_title('', false);
         }
-    } else {
+    }
+    else {
         if (is_attachment()) {
             $output = get_bloginfo('name') . ' &#8212; ' . single_post_title('', false);
         } else if (is_single()) {

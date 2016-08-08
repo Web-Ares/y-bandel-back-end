@@ -191,6 +191,9 @@ get_header(); ?>
                         $projects->the_post();
                         $thumb_id = get_post_thumbnail_id();
                         $thumb_url = wp_get_attachment_image_src($thumb_id,'full')[0];
+                        $alt = get_post_meta($thumb_id, '_wp_attachment_image_alt', true);
+                        $attachment = get_post( $thumb_id );
+                        $title = $attachment->post_title;
                         $current_icon_footage = get_field('project_footage');
                         if($current_icon_footage <= 1000){
                             $cur_footage = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 46 46"><path class="cls-1" d="M36.17,29.87L24.69,24.05V18a0.3,0.3,0,0,0-.16-0.26L13.08,11.33a0.31,0.31,0,0,0-.31,0,0.3,0.3,0,0,0-.15.26V30.27a0.27,0.27,0,0,0,0,.08,0.3,0.3,0,0,0,0,.12,0.3,0.3,0,0,0,.16.27l11.46,6.44a0.31,0.31,0,0,0,.15,0,0.3,0.3,0,0,0,.15,0L36.18,30.4A0.3,0.3,0,0,0,36.17,29.87ZM24.08,18.21v5.85L13.24,30V12.11Zm0,6.54V36.38L13.56,30.47Zm0.61,11.62V24.74l10.7,5.42Z"/></svg>';
@@ -213,7 +216,7 @@ get_header(); ?>
 
                             <!-- all-works__pic -->
                             <a href="<?php the_permalink(); ?>" class="all-works__pic">
-                                <img src="<?php echo $thumb_url; ?> " alt="<?= $name; ?>">
+                                <img src="<?php echo $thumb_url; ?> " alt="<?= $alt; ?>" title="<?= $title; ?>">
                             </a>
                             <!-- /all-works__pic -->
 

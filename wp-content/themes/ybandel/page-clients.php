@@ -48,12 +48,12 @@ get_header(); ?>
                 foreach($posts as $post){setup_postdata($post);
                     $thumb_id = get_post_thumbnail_id();
                     $thumb_url = wp_get_attachment_image_src($thumb_id,'full')[0];
-
-
-                ?>
+                    $alt = get_post_meta($thumb_id, '_wp_attachment_image_alt', true);
+                    $attachment = get_post( $thumb_id );
+                    $title = $attachment->post_title; ?>
 
                     <!-- clients__item -->
-                    <div class="clients__item"><img src="<?php echo $thumb_url; ?>" alt="<?php echo $post->name; ?>"></div>
+                    <div class="clients__item"><img src="<?php echo $thumb_url; ?>" alt="<?php echo $alt; ?>" title="<?= $title; ?>"></div>
                     <!-- /clients__item -->
 
                 <?php $count++; } ?>
