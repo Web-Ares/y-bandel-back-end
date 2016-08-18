@@ -56,14 +56,14 @@ get_header(); ?>
                         $fax = 'fax:';
                         $email = 'email:';
                     }
-                    
+
                     $field_phone  = get_field('phone');
                     $field_phone_2  = get_field('phone_2');
                     $field_fax  = get_field('fax');
                     $field_email = get_field('e-mail');
-                    
-                    
-                    
+
+
+
                     if($field_phone):?>
                     <dl>
                         <dt><?php echo $phone; ?></dt>

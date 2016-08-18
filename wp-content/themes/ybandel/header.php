@@ -6,7 +6,7 @@
     <meta name="format-detection" content="address=no">
     <meta charset="UTF-8">
     <link rel='shortcut icon' type='image/x-icon' href='<?php echo TEMPLATEURI; ?>/dist/img/favicon.ico' />
-    <title><?php wp_title(''); ?></title>
+    <title><?php document_title(); ?></title>
     <?php wp_head(); ?>
 </head>
 <body data-action="<?php echo admin_url( 'admin-ajax.php' );?>">
@@ -45,13 +45,13 @@ if($cur_slug=='en'){
         <?php if(is_front_page()){ ?>
             <!-- logo -->
             <h1 class="logo">
-                <img src="<?php echo TEMPLATEURI; ?>/dist/img/logo.png" alt="בנדל ניהול פרויקטים בבניה" title="בנדל ניהול פרויקטים בבניה" >
+                <img src="<?php echo TEMPLATEURI; ?>/dist/img/logo.png" alt="בנדל ניהול פרויקטים בבניה">
             </h1>
             <!-- /logo -->
         <?php } else {?>
         <!-- logo -->
         <a href="<?php echo home_url(); ?>" class="logo">
-            <img src="<?php echo TEMPLATEURI; ?>/dist/img/logo.png" alt="בנדל ניהול פרויקטים בבניה" title="בנדל ניהול פרויקטים בבניה">
+            <img src="<?php echo TEMPLATEURI; ?>/dist/img/logo.png" alt="בנדל ניהול פרויקטים בבניה">
         </a>
         <!-- /logo -->
         <?php } ?>
